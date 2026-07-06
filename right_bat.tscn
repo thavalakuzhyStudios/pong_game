@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://dug66idaknryg"]
+
+[ext_resource type="Script" uid="uid://bix3r6vunrj1y" path="res://right_bat.gd" id="1_ht78f"]
+[ext_resource type="Texture2D" uid="uid://dfvonsh3s751f" path="res://bat.svg" id="2_vk7gl"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fhpr2"]
+size = Vector2(10, 106)
+
+[node name="right_bat" type="Area2D" unique_id=2081498102]
+script = ExtResource("1_ht78f")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=334009337]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_vk7gl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=723574613]
+shape = SubResource("RectangleShape2D_fhpr2")
+
+[node name="collision_corr" type="Timer" parent="." unique_id=1886359474]
+wait_time = 0.1
+one_shot = true
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="collision_corr" to="." method="_on_collision_corr_timeout"]

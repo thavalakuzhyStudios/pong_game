@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cqow47bch5ocs"]
+
+[ext_resource type="PackedScene" uid="uid://d2bkv1q1e5fpe" path="res://left_bat.tscn" id="1_0xm2m"]
+[ext_resource type="Script" uid="uid://bs2qeucwtife5" path="res://main.gd" id="1_1bvp3"]
+[ext_resource type="PackedScene" uid="uid://dug66idaknryg" path="res://right_bat.tscn" id="2_h2yge"]
+[ext_resource type="PackedScene" uid="uid://neafyrt5gjco" path="res://ball.tscn" id="3_h2yge"]
+[ext_resource type="PackedScene" uid="uid://cbb6u8lu02dql" path="res://static_body_2d.tscn" id="5_lquwl"]
+
+[node name="main" type="Node2D" unique_id=1526654712]
+script = ExtResource("1_1bvp3")
+
+[node name="left_bat" parent="." unique_id=2081498102 instance=ExtResource("1_0xm2m")]
+position = Vector2(36, 294)
+
+[node name="right_bat" parent="." unique_id=664463798 instance=ExtResource("2_h2yge")]
+position = Vector2(1113, 289)
+
+[node name="ball" parent="." unique_id=643173470 instance=ExtResource("3_h2yge")]
+position = Vector2(588, 285)
+
+[node name="StaticBody2D" parent="." unique_id=2042020365 instance=ExtResource("5_lquwl")]
+position = Vector2(-4, 0)
+
+[connection signal="left_hit" from="left_bat" to="." method="hit_register"]
+[connection signal="right_hit" from="right_bat" to="." method="hit_register"]
