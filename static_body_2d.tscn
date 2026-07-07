@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://cbb6u8lu02dql"]
 
+[ext_resource type="Texture2D" uid="uid://dfvonsh3s751f" path="res://bat.svg" id="1_yjt17"]
+
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_lquwl"]
 friction = 0.0
 bounce = 1.0
@@ -17,3 +19,13 @@ shape = SubResource("RectangleShape2D_fhpr2")
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="." unique_id=767173233]
 position = Vector2(585, 622)
 shape = SubResource("RectangleShape2D_fhpr2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=529596780]
+position = Vector2(584.5, 627.5)
+scale = Vector2(34.757576, 0.09915029)
+texture = ExtResource("1_yjt17")
+
+[node name="Bat" type="Sprite2D" parent="." unique_id=1276831034]
+position = Vector2(579.5, 23.5)
+scale = Vector2(34.757576, 0.07648726)
+texture = ExtResource("1_yjt17")
