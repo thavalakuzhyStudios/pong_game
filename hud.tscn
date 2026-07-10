@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://dvewtmm6d837k"]
+
+[node name="HUD" type="CanvasLayer" unique_id=544435557]
+
+[node name="gameStartTimer" type="Timer" parent="." unique_id=1131855905]
+wait_time = 3.0
+one_shot = true
+
+[node name="score" type="Label" parent="." unique_id=2011100486]
+offset_left = 489.0
+offset_top = 15.0
+offset_right = 529.0
+offset_bottom = 38.0
+text = "0 - 0"
+
+[node name="gameEndTimer" type="Timer" parent="." unique_id=1880578483]
