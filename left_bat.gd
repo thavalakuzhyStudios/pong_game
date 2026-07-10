@@ -24,7 +24,7 @@ func _process(delta):
 
 func _on_body_entered(body: Node2D) -> void:
 	left_hit.emit()
-	print('Left')
+	speed += 1
 	$CollisionShape2D.set_deferred("disabled", true)
 	$collision_corr.start()
 
