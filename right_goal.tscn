@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://lfw5l7x5cipu"]
+
+[ext_resource type="Script" uid="uid://bsjitle01r6fn" path="res://right_goal.gd" id="1_kypui"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fhpr2"]
+b = Vector2(0, 648)
+
+[node name="right_goal" type="Area2D" unique_id=347538658]
+script = ExtResource("1_kypui")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=419625611]
+shape = SubResource("SegmentShape2D_fhpr2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

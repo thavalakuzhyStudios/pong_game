@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dvewtmm6d837k"]
 
+[ext_resource type="Script" uid="uid://d3xgmdujcke3m" path="res://hud.gd" id="1_37p78"]
+
 [node name="HUD" type="CanvasLayer" unique_id=544435557]
+script = ExtResource("1_37p78")
 
 [node name="gameStartTimer" type="Timer" parent="." unique_id=1131855905]
 wait_time = 3.0

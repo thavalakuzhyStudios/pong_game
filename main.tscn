@@ -5,21 +5,33 @@
 [ext_resource type="PackedScene" uid="uid://dug66idaknryg" path="res://right_bat.tscn" id="2_h2yge"]
 [ext_resource type="PackedScene" uid="uid://neafyrt5gjco" path="res://ball.tscn" id="3_h2yge"]
 [ext_resource type="PackedScene" uid="uid://cbb6u8lu02dql" path="res://static_body_2d.tscn" id="5_lquwl"]
+[ext_resource type="PackedScene" uid="uid://dvewtmm6d837k" path="res://hud.tscn" id="6_272bh"]
+[ext_resource type="PackedScene" uid="uid://udg4yd8fjodx" path="res://left_goal.tscn" id="7_5vw27"]
+[ext_resource type="PackedScene" uid="uid://lfw5l7x5cipu" path="res://right_goal.tscn" id="8_5vw27"]
 
 [node name="main" type="Node2D" unique_id=1526654712]
 script = ExtResource("1_1bvp3")
 
 [node name="left_bat" parent="." unique_id=2081498102 instance=ExtResource("1_0xm2m")]
-position = Vector2(36, 294)
+position = Vector2(72, 295)
 
 [node name="right_bat" parent="." unique_id=664463798 instance=ExtResource("2_h2yge")]
-position = Vector2(1113, 289)
+position = Vector2(1089, 289)
 
 [node name="ball" parent="." unique_id=643173470 instance=ExtResource("3_h2yge")]
 position = Vector2(588, 285)
 
 [node name="StaticBody2D" parent="." unique_id=2042020365 instance=ExtResource("5_lquwl")]
-position = Vector2(-4, 0)
+position = Vector2(-6, 2)
+
+[node name="HUD" parent="." unique_id=544435557 instance=ExtResource("6_272bh")]
+
+[node name="left_goal" parent="." unique_id=347538658 instance=ExtResource("7_5vw27")]
+
+[node name="right_goal" parent="." unique_id=1849024105 instance=ExtResource("8_5vw27")]
+position = Vector2(1157, 4)
 
 [connection signal="left_hit" from="left_bat" to="." method="hit_register"]
 [connection signal="right_hit" from="right_bat" to="." method="hit_register"]
+[connection signal="right_scores" from="left_goal" to="HUD" method="right_scores"]
+[connection signal="left_scores" from="right_goal" to="HUD" method="left_scores"]

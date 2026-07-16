@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://udg4yd8fjodx"]
+
+[ext_resource type="Script" uid="uid://c26gefdjadr48" path="res://left_goal.gd" id="1_tngr7"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_fhpr2"]
+b = Vector2(0, 648)
+
+[node name="left_goal" type="Area2D" unique_id=347538658]
+script = ExtResource("1_tngr7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=419625611]
+shape = SubResource("SegmentShape2D_fhpr2")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
