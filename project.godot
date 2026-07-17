@@ -10,12 +10,13 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="PONG"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
 [display]
 
+window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
 

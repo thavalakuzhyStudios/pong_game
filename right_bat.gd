@@ -7,6 +7,9 @@ var screen_size
 
 signal right_hit
 
+func game_start():
+	speed = 5
+
 func _ready():
 	screen_size = get_viewport_rect().size
 	screen_size.y -= 100
